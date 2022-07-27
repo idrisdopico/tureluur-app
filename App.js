@@ -1,11 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { colors } from "./app/theme/colors";
+import TextComponent, { FamilyType } from "./app/components/TextComponent";
 
 export default function App() {
   return (
     <View style={[styles.container, { backgroundColor: colors.backgroundColor }]}>
-      <Text>Plaats hier je bestelling</Text>
-      <Text>Bestellingen geplaatst na 20:00 worden de volgende dag niet meer mee genomen</Text>
+      <TextComponent family={FamilyType.Bold}>
+        Dit is een test
+      </TextComponent>
     </View>
   );
 }
@@ -13,6 +15,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    justifyContent: 'center'
   },
 });
